@@ -1,0 +1,3 @@
+-- If The Download Says Virus Detected/File Error Turn off Security Real Time Protection, All Executors have the Same problem with False Accusations. So It's Normal
+-- I am not asscociated with The Owner of Wave, I made somethign so you won't have to Pay because I think it's stupid how you have to pay to cheat.
+-- If Problems Exceed Contact @millmox On Discord.
