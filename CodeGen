@@ -1,0 +1,18 @@
+import secrets
+
+def generate_infinite_keys():
+    while True:
+        random_part = secrets.token_hex(32)  # Generates a 256-bit random key (64 hex characters)
+        key = f"WAVE_{random_part}"  # Prefixing the key with 'WAVE_'
+        yield key  # Yielding the key to simulate continuous generation
+
+# Example of using the infinite key generator
+if __name__ == "__main__":
+    key_generator = generate_infinite_keys()
+    
+    unique_keys = set()  # To store unique keys
+    while len(unique_keys) < 7:  # Stop when we have 7 unique keys
+        key = next(key_generator)
+        if key not in unique_keys:
+            unique_keys.add(key)
+            print(key)  # Output the key
