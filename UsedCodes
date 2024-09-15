@@ -1,0 +1,26 @@
+import secrets
+
+def generate_infinite_keys():
+    while True:
+        random_part = secrets.token_hex(32)  # Generates a 256-bit random key (64 hex characters)
+        key = f"WAVE_{random_part}"  # Prefixing the key with 'WAVE_'
+        yield key  # Yielding the key to simulate continuous generation
+
+# Example of generating and storing 7 keys in a list
+if __name__ == "__main__":
+    key_generator = generate_infinite_keys()
+    
+    unique_keys = set()  # To store unique keys
+    while len(unique_keys) < 7:  # Stop when we have 7 unique keys
+        key = next(key_generator)
+        unique_keys.add(key)
+    
+    # Convert the set to a list
+    key_list = list(unique_keys)
+
+    # Now you have a list of 7 keys
+    print("Generated Keys:")
+    for key in key_list:
+        print(key)
+
+    # Keys are now in the list 'key_list' which can be used later in the script
